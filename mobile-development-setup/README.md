@@ -1,33 +1,39 @@
-# Mobile Development Environment Setup
+# First Mobile App with Expo Router
 
-This document outlines the steps to set up your mobile development environment using Expo Go for React Native development.
+This project demonstrates the setup of a basic mobile application using Expo Router. It includes the initial project structure and basic navigation setup.
 
-## Prerequisites
+## Project Setup              
 
-- [x] Node.js LTS (v18 or later recommended)
-- [x] VS Code (or your preferred IDE)
-- [ ] macOS, Linux, or Windows operating system
-- [ ] Physical mobile device (iOS or Android)
-- [ ] Expo Go app installed on your mobile device
+2. **Project Structure**
+   ```
+   app-example/
+   ├── app/
+   │   └── (tabs)/
+   │       └── index.tsx     # Home screen component
+   └── constants/
+       └── Colors.tsx       # Color scheme definitions
+   ```
 
-## Installation Steps
+## Development
 
-### 1. Install Node.js LTS
-If you haven't already, download and install Node.js LTS from [nodejs.org](https://nodejs.org/).
+### Running the App
+1. Start the development server:
+   ```bash
+   npx expo start
+   ```
+2. Scan the QR code with your device's camera (iOS) or the Expo Go app (Android)
 
-### 2. Install Expo CLI
-Open your terminal and run:
+### Reset Project
+To reset the project to its initial state:
 ```bash
-npm install -g expo-cli
+npm run reset-project
 ```
 
-### 3. Install Expo Go on Your Device
-1. For iOS: Download from the [App Store](https://apps.apple.com/app/expo-go/id982107779)
-2. For Android: Download from the [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US)
-
-### 4. Create an Expo Account
-1. Open the Expo Go app on your device
-2. Create a new account or log in if you already have one
+**Observations when running reset-project:**
+- Removes the `node_modules` directory
+- Clears the Metro bundler cache
+- Reinstalls all dependencies
+- Resets any local state or cached data
 
 ## Verifying Your Setup
 

@@ -1,0 +1,24 @@
+{
+  "name": "prodev-mobile-app-0x02-new",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "reset-project": "if exist node_modules rmdir /s /q node_modules && if exist .expo rmdir /s /q .expo && if exist package-lock.json del package-lock.json && npm install"
+  },
+  "dependencies": {
+    "expo": "~53.0.22",
+    "expo-status-bar": "~2.2.3",
+    "react": "18.2.0",
+    "react-native": "0.74.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/react": "~19.0.10",
+    "typescript": "~5.8.3"
+  },
+  "private": true
+}
