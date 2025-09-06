@@ -2,22 +2,92 @@
 
 This project demonstrates the setup of a basic mobile application using Expo Router. It includes the initial project structure and basic navigation setup.
 
-## Project Setup              
+## Project Structure
 
-2. **Project Structure**
+```
+app-example/
+├── app/
+│   └── (tabs)/
+│       └── index.tsx        # Home screen with welcome message
+└── constants/
+    └── Colors.tsx          # Theme colors and theming utilities
+```
+
+## Key Features
+
+- **Expo Router** for navigation
+- **TypeScript** for type safety
+- **Theming support** with light/dark mode
+- **Responsive layout** that works on different screen sizes
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v16 or later)
+- npm or yarn
+- Expo CLI (`npm install -g expo-cli`)
+- Expo Go app (for testing on physical devices)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd mobile-development-setup
    ```
-   app-example/
-   ├── app/
-   │   └── (tabs)/
-   │       └── index.tsx     # Home screen component
-   └── constants/
-       └── Colors.tsx       # Color scheme definitions
+
+2. Install dependencies:
+   ```bash
+   npm install
    ```
+
+3. Start the development server:
+   ```bash
+   npx expo start
+   ```
+
+4. Test the app:
+   - **iOS**: Scan the QR code with your phone's camera
+   - **Android**: Use the Expo Go app to scan the QR code
 
 ## Development
 
-### Running the App
-1. Start the development server:
+### Available Scripts
+- `npm start` - Start the development server
+- `npm run android` - Run on Android device/emulator
+- `npm run ios` - Run on iOS simulator (macOS only)
+- `npm run web` - Run in web browser
+- `npm run reset-project` - Reset the project (clean and reinstall dependencies)
+
+### Project Structure Overview
+
+- `/app` - Application screens and navigation
+  - `/(tabs)` - Tab navigation
+  - `index.tsx` - Home screen
+- `/constants` - Application constants and theming
+  - `Colors.tsx` - Color definitions and theme utilities
+
+## Testing
+
+1. Run the app:
+   ```bash
+   npx expo start
+   ```
+
+2. On your mobile device:
+   - Open the Expo Go app
+   - Scan the QR code from the terminal
+   - Verify the home screen displays: "** First App Created **"
+
+## Troubleshooting
+
+### Common Issues
+- **App not loading**: Try running `npm run reset-project`
+- **TypeScript errors**: Make sure all dependencies are installed
+- **Expo Go connection issues**: Ensure your device is on the same network as your development machine
+
+## License
+This project is part of the ProDev Mobile curriculum.
    ```bash
    npx expo start
    ```
