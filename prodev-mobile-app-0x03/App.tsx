@@ -1,22 +1,23 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useFonts } from 'expo-font';
+import { Slot } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import Index from './App';
-
-const Stack = createNativeStackNavigator();
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    'Inter-Black': require('./assets/fonts/Inter-Black.otf'),
+    'Inter-Bold': require('./assets/fonts/Inter-Bold.otf'),
+    'Inter-Regular': require('./assets/fonts/Inter-Regular.otf'),
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen 
-            name="Home" 
-            component={Index} 
-            options={{ headerShown: false }}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <StatusBar style="auto" />
+      <Slot />
     </SafeAreaProvider>
   );
 }

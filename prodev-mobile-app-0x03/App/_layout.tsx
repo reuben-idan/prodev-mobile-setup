@@ -11,6 +11,7 @@ export default function RootLayout() {
             headerShown: false 
           }} 
         />
+        {/* Add more screens here as needed */}
       </Stack>
     </SafeAreaProvider>
   );
